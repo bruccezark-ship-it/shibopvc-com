@@ -1,0 +1,199 @@
+@import "tailwindcss";
+
+:root {
+  --radius: 0rem;
+  --background: 0 0% 100%;
+  --foreground: 20 14.3% 4.1%;
+  --stone-50: 30 10% 98%;
+  --stone-100: 30 10% 96%;
+  --stone-200: 30 10% 90%;
+  --stone-300: 30 10% 83%;
+  --stone-400: 30 10% 65%;
+  --stone-500: 30 10% 47%;
+  --stone-600: 30 10% 35%;
+  --stone-700: 30 10% 27%;
+  --stone-800: 30 10% 16%;
+  --stone-900: 30 10% 10%;
+  --stone-950: 30 10% 5%;
+  --amber-300: 45 93% 58%;
+  --amber-400: 45 93% 47%;
+  --amber-500: 45 93% 40%;
+  --container: 80rem;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-noto-serif-sc), "Source Han Serif CN", serif;
+  --brand-yellow: #ffc406;
+}
+
+@theme inline {
+  --radius-sm: 0rem;
+  --radius-md: 0rem;
+  --radius-lg: 0rem;
+  --radius-xl: 0rem;
+  --radius-2xl: 0rem;
+  --radius-3xl: 0rem;
+  --radius-4xl: 0rem;
+  --radius: 0rem;
+
+  --color-stone-50: hsl(var(--stone-50));
+  --color-stone-100: hsl(var(--stone-100));
+  --color-stone-200: hsl(var(--stone-200));
+  --color-stone-300: hsl(var(--stone-300));
+  --color-stone-400: hsl(var(--stone-400));
+  --color-stone-500: hsl(var(--stone-500));
+  --color-stone-600: hsl(var(--stone-600));
+  --color-stone-700: hsl(var(--stone-700));
+  --color-stone-800: hsl(var(--stone-800));
+  --color-stone-900: hsl(var(--stone-900));
+  --color-stone-950: hsl(var(--stone-950));
+
+  --color-amber-300: hsl(var(--amber-300));
+  --color-amber-400: hsl(var(--amber-400));
+  --color-amber-500: hsl(var(--amber-500));
+
+  --font-sans: var(--font-sans);
+  --font-display: var(--font-display);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: hsl(var(--stone-200)) transparent;
+}
+
+html {
+  scroll-behavior: auto;
+}
+
+body {
+  background: #fff;
+  color: hsl(var(--stone-900));
+  font-family: var(--font-sans);
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.container-site {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  .container-site {
+    padding: 0 3rem;
+  }
+}
+
+.section-label {
+  color: hsl(var(--amber-500));
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  font-size: 0.75rem;
+  font-weight: 300;
+  display: block;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  margin-bottom: 1.25rem;
+  font-size: clamp(2.25rem, 5vw, 3rem);
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+.section-line {
+  background: hsl(var(--stone-300));
+  width: 3.5rem;
+  height: 1px;
+  margin-bottom: 1.5rem;
+}
+
+.section-desc {
+  color: hsl(var(--stone-500));
+  max-width: 28rem;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.625;
+}
+
+.btn-primary {
+  background: hsl(var(--amber-400));
+  color: hsl(var(--stone-900));
+  letter-spacing: 0.025em;
+  cursor: pointer;
+  border: none;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 2rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: background 0.3s;
+  display: inline-flex;
+}
+
+.btn-primary:hover {
+  background: hsl(var(--amber-300));
+}
+
+.btn-outline {
+  border: 1px solid hsl(var(--stone-800));
+  color: hsl(var(--stone-800));
+  letter-spacing: 0.025em;
+  cursor: pointer;
+  background: transparent;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 2rem;
+  font-size: 0.875rem;
+  font-weight: 300;
+  transition: all 0.3s;
+  display: inline-flex;
+}
+
+.btn-outline:hover {
+  background: hsl(var(--stone-800));
+  color: #fff;
+}
+
+.btn-outline-light {
+  color: #fff;
+  letter-spacing: 0.025em;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 2rem;
+  font-size: 0.875rem;
+  font-weight: 300;
+  transition: all 0.3s;
+  display: inline-flex;
+}
+
+.btn-outline-light:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.btn-outline-dark {
+  border: 1px solid hsl(var(--stone-300));
+  color: hsl(var(--stone-800));
+  letter-spacing: 0.025em;
+  cursor: pointer;
+  background: transparent;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 2rem;
+  font-size: 0.875rem;
+  font-weight: 300;
+  transition: all 0.3s;
+  display: inline-flex;
+}
+
+.btn-outline-dark:hover {
+  background: hsl(var(--stone-100));
+}
