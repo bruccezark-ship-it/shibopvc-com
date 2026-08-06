@@ -197,3 +197,72 @@ body {
 .btn-outline-dark:hover {
   background: hsl(var(--stone-100));
 }
+
+/* 滚动驱动导航栏背景动画 */
+@keyframes header-bg {
+  from {
+    background-color: transparent;
+    box-shadow: none;
+    border-color: transparent;
+  }
+  to {
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);
+    border-color: hsl(var(--stone-100));
+  }
+}
+
+@keyframes header-text {
+  from { color: white; }
+  to { color: hsl(var(--stone-900)); }
+}
+
+@keyframes header-subtitle {
+  from { color: rgba(255, 255, 255, 0.6); }
+  to { color: hsl(var(--stone-400)); }
+}
+
+@keyframes header-nav {
+  from { color: rgba(255, 255, 255, 0.8); }
+  to { color: hsl(var(--stone-600)); }
+}
+
+.site-header {
+  animation: header-bg linear both;
+  animation-timeline: scroll(root);
+  animation-range: 0px 80px;
+}
+
+.site-header .brand-text {
+  animation: header-text linear both;
+  animation-timeline: scroll(root);
+  animation-range: 0px 80px;
+}
+
+.site-header .brand-subtitle {
+  animation: header-subtitle linear both;
+  animation-timeline: scroll(root);
+  animation-range: 0px 80px;
+}
+
+.site-header .nav-link {
+  animation: header-nav linear both;
+  animation-timeline: scroll(root);
+  animation-range: 0px 80px;
+}
+
+@supports not (animation-timeline: scroll()) {
+  .site-header {
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);
+    border-bottom: 1px solid hsl(var(--stone-100));
+  }
+  .site-header .brand-text,
+  .site-header .brand-subtitle,
+  .site-header .nav-link,
+  .site-header .menu-icon {
+    color: hsl(var(--stone-900)) !important;
+  }
+}

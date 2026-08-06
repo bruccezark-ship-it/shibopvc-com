@@ -2,53 +2,25 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { site } from "@/data/site";
 
 export default function Header() {
-  const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
 
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20);
-    onScroll();
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
-  useEffect(() => {
-    setOpen(false);
-    // 路由切换后已滚到顶部，立即同步导航栏状态，避免背景淡入淡出
-    setScrolled(false);
-  }, [pathname]);
-
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 ${
-        scrolled
-          ? "bg-white/95 backdrop-blur-md shadow-sm border-b border-stone-100 transition-all duration-300"
-          : "bg-transparent"
-      }`}
-    >
+    <header className="site-header fixed top-0 left-0 right-0 z-50 backdrop-blur-lg border-b border-transparent">
       <div className="container-site flex items-center justify-between py-5">
         <Link href="/" className="flex items-center gap-3">
           <div className="w-8 h-8 bg-stone-800 flex items-center justify-center">
             <div className="w-4 h-4 border-2 border-amber-400" />
           </div>
           <div>
-            <span
-              className={`font-display text-xl font-bold tracking-[0.12em] ${
-                scrolled ? "text-stone-900" : "text-white"
-              }`}
-            >
+            <span className="brand-text font-display text-xl font-bold tracking-[0.12em]">
               {site.company.brand}
             </span>
-            <p
-              className={`text-[10px] tracking-widest uppercase ${
-                scrolled ? "text-stone-400" : "text-white/60"
-              }`}
-            >
+            <p className="brand-subtitle text-[10px] tracking-widest uppercase">
               新材料科技有限公司
             </p>
           </div>
@@ -61,11 +33,9 @@ export default function Header() {
               <Link
                 key={item.path}
                 href={item.path}
-                className={`text-sm font-light tracking-wide relative group transition-colors duration-150 ${
-                  scrolled
-                    ? "text-stone-600 hover:text-stone-900"
-                    : "text-white/80 hover:text-white"
-                } ${active ? (scrolled ? "text-stone-900" : "text-white") : ""}`}
+                className={`nav-link text-sm font-light tracking-wide relative group ${
+                  active ? "brand-text" : ""
+                }`}
               >
                 {item.name}
                 <span
@@ -94,7 +64,7 @@ export default function Header() {
                 fill="none"
                 stroke="currentColor"
                 strokeWidth="1.5"
-                className={scrolled ? "text-stone-800" : "text-white"}
+                className="menu-icon brand-text"
               >
                 <line x1="18" y1="6" x2="6" y2="18" />
                 <line x1="6" y1="6" x2="18" y2="18" />
@@ -107,7 +77,7 @@ export default function Header() {
                 fill="none"
                 stroke="currentColor"
                 strokeWidth="1.5"
-                className={scrolled ? "text-stone-800" : "text-white"}
+                className="menu-icon brand-text"
               >
                 <line x1="3" y1="6" x2="21" y2="6" />
                 <line x1="3" y1="12" x2="21" y2="12" />
