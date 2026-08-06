@@ -1,0 +1,14 @@
+{
+  "basePath": "/",
+  "cleanRemote": true,
+  "crawlMaxPages": 50,
+  "crawlMaxDepth": 1,
+  "backup": {
+    "prefix": "shibopvc-com/",
+    "dirs": [
+      "public"
+    ],
+    "bucket": "project-assets-1394581464",
+    "region": "ap-guangzhou"
+  }
+}
