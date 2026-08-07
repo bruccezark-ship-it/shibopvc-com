@@ -1,13 +1,13 @@
 {
   "domains": [
     {
-      "domain": "www.shibopvc.com",
-      "url": "http://www.shibopvc.com",
-      "mode": "domain",
-      "target": "shibopvc.com",
-      "cosPath": "cos://chinacompanys-1394581464/shibopvc-com/",
-      "cname": "www.shibopvc.com.cdn.dnsv1.com",
-      "publishedAt": "2026-08-06T11:53:59.397Z",
+      "domain": "teslaa.hbshibo.com",
+      "url": "http://teslaa.hbshibo.com",
+      "mode": "subdomain",
+      "target": "teslaa",
+      "cosPath": "cos://webdemos-1394581464/teslaa/",
+      "cname": "teslaa.hbshibo.com.cdn.dnsv1.com",
+      "publishedAt": "2026-08-07T10:36:07.109Z",
       "status": "active"
     }
   ]

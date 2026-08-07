@@ -58,7 +58,7 @@ export default function SolutionsContent() {
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-stone-900/0 group-hover:bg-stone-900/40 transition-all duration-300 flex items-center justify-center">
-                  <span className="text-white text-sm font-light tracking-wide opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center gap-2">
+                  <span className="text-white text-sm font-light tracking-wide opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 flex items-center gap-2">
                     <span>{solutionsPage.detailLabels.viewCaseHover}</span>
                     <svg
                       width="16"

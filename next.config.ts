@@ -9,4 +9,5 @@ const __opencodePreviewNextConfig = nextConfig;
 
 const __opencodeCosNextConfig = withOpencodePreviewSelect(__opencodePreviewNextConfig) /* previewSelectNextWebpack opencodePreviewNextLocInject */
 
-export default { ...__opencodeCosNextConfig, output: 'export' } /* opencode-cos-static-export */
+export default {
+  allowedDevOrigins: ["82.157.113.110"], ...__opencodeCosNextConfig, output: 'export' } /* opencode-cos-static-export */

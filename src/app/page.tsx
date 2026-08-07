@@ -198,7 +198,7 @@ export default function HomePage() {
                     {item.sub}
                   </p>
                 </div>
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-stone-900/40">
+                <div className="absolute inset-0 flex items-center justify-center opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 bg-stone-900/40">
                   <span className="inline-flex items-center gap-2 text-white border border-white/60 px-5 py-2 text-sm font-light tracking-wide">
                     {scenes.hoverCta}
                     <svg
