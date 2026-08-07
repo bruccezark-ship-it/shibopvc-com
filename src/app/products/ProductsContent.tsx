@@ -46,14 +46,14 @@ function ProductDialog({
 
   return (
     <div
-      className="fixed inset-0 z-[100] flex items-center justify-center p-4"
+      className="fixed top-0 left-0 right-0 bottom-0 z-[100] flex items-center justify-center p-4"
       role="dialog"
       aria-modal="true"
       aria-label={product.name}
     >
       <button
         type="button"
-        className="absolute inset-0 bg-black/60"
+        className="absolute top-0 left-0 right-0 bottom-0" style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         aria-label="关闭"
         onClick={onClose}
       />
@@ -61,7 +61,7 @@ function ProductDialog({
         <button
           type="button"
           onClick={onClose}
-          className="absolute top-3 right-3 z-20 w-8 h-8 flex items-center justify-center bg-white/90 text-stone-700 hover:bg-white"
+          className="absolute top-3 right-3 z-20 w-8 h-8 flex items-center justify-center text-stone-700 hover:bg-white" style={{ backgroundColor: "rgba(255,255,255,0.9)" }}
           aria-label="关闭详情"
         >
           <svg
@@ -83,7 +83,7 @@ function ProductDialog({
               alt={`河北石博 | ${product.name}`}
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-stone-900/40" />
+            <div className="absolute top-0 left-0 right-0 bottom-0" style={{ backgroundColor: "rgba(28, 25, 23, 0.4)" }} />
             <div className="absolute bottom-5 left-5 right-5">
               <p className="text-[10px] tracking-widest text-amber-400 uppercase mb-1">
                 {product.nameEn}
@@ -240,21 +240,21 @@ export default function ProductsContent() {
                 onClick={() => setSelected(item)}
                 className="group text-left flex flex-col h-full transition-all duration-300 border border-stone-200 hover:border-amber-400 hover:shadow-md"
               >
-                <div className="relative overflow-hidden shrink-0" style={{ paddingBottom: "75%" }}>
+                <div className="relative overflow-hidden shrink-0">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={item.img}
                     alt={`河北石博 | ${item.name}`}
-                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    className="block w-full h-auto md:transition-transform md:duration-700 md:group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-stone-900/70 via-transparent to-transparent" />
+                  <div className="absolute top-0 left-0 right-0 bottom-0" style={{ background: "linear-gradient(to top, rgba(28,25,23,0.7), transparent, transparent)" }} />
                   <div className="absolute bottom-0 left-0 right-0 p-4">
                     <p className="text-[10px] tracking-widest text-amber-400 font-medium uppercase mb-0.5">
                       {item.nameEn}
                     </p>
                   </div>
-                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div className="bg-stone-900/70 px-4 py-2 flex items-center gap-2">
+                  <div className="absolute top-0 left-0 right-0 bottom-0 hidden md:flex items-center justify-center opacity-0 md:group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="px-4 py-2 flex items-center gap-2" style={{ backgroundColor: "rgba(28,25,23,0.7)" }}>
                       <svg
                         width="14"
                         height="14"

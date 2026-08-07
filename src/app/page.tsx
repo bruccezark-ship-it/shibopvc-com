@@ -58,14 +58,14 @@ export default function HomePage() {
   return (
     <main>
       <section className="relative h-screen min-h-[680px] flex items-center overflow-hidden">
-        <div className="absolute inset-0">
+        <div className="absolute top-0 left-0 right-0 bottom-0">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={hero.bgImage}
             alt={hero.alt}
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-stone-900/80 via-stone-900/50 to-transparent" />
+          <div className="absolute top-0 left-0 right-0 bottom-0" style={{ background: "linear-gradient(to right, rgba(28,25,23,0.8), rgba(28,25,23,0.5), transparent)" }} />
         </div>
         <div className="container-site relative z-10 w-full">
           <div className="max-w-2xl">
@@ -188,9 +188,9 @@ export default function HomePage() {
                 <img
                   src={item.img}
                   alt={`河北石博 | ${item.title}弹性地板`}
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="absolute top-0 left-0 right-0 bottom-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-stone-900/80 via-stone-900/20 to-transparent" />
+                <div className="absolute top-0 left-0 right-0 bottom-0" style={{ background: "linear-gradient(to top, rgba(28,25,23,0.8), rgba(28,25,23,0.2), transparent)" }} />
                 <div className="absolute bottom-0 left-0 right-0 p-6">
                   <h3 className="font-display text-xl font-medium text-white mb-1">
                     {item.title}
@@ -199,7 +199,7 @@ export default function HomePage() {
                     {item.sub}
                   </p>
                 </div>
-                <div className="absolute inset-0 flex items-center justify-center opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 md:bg-stone-900/40">
+                <div className="absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 md:bg-stone-900/40">
                   <span className="inline-flex items-center gap-2 text-white border border-white/60 px-5 py-2 text-sm font-light tracking-wide">
                     {scenes.hoverCta}
                     <svg

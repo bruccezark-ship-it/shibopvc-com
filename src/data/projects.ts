@@ -45,7 +45,7 @@ export const projects: Project[] = [
   },
   {
     "title": "河北某学院报告厅地面工程",
-    "img": "/images/baogaoting-fNXE3Qyf.webp",
+    "img": "/images/baogaoting-7Ki5KTST.webp",
     "area": "1,200㎡",
     "location": "河北正定县",
     "duration": "7天",
@@ -73,7 +73,7 @@ export const projects: Project[] = [
   },
   {
     "title": "石家庄汽车产业园某4S店地面工程",
-    "img": "/images/case_shijiazhuang_benz-ZM1dQkVS.webp",
+    "img": "/images/case_shijiazhuang_benz-FteZJoKA.webp",
     "area": "4,000㎡",
     "location": "河北石家庄",
     "duration": "20天",

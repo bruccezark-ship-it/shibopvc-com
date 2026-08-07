@@ -17,14 +17,14 @@ export function PageHero({
 }: PageHeroProps) {
   return (
     <section className="relative h-[50vh] min-h-[400px] flex items-center overflow-hidden">
-      <div className="absolute inset-0">
+      <div className="absolute top-0 left-0 right-0 bottom-0">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={bgImage}
           alt={altText}
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-stone-900/80 via-stone-900/50 to-transparent" />
+        <div className="absolute top-0 left-0 right-0 bottom-0" style={{ background: "linear-gradient(to right, rgba(28,25,23,0.8), rgba(28,25,23,0.5), transparent)" }} />
       </div>
       <div className="container-site relative z-10">
         <div className="max-w-xl">

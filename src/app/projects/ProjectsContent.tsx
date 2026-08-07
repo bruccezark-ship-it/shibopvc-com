@@ -43,7 +43,7 @@ export default function ProjectsContent() {
                       <img
                         src={project.img}
                         alt={`河北石博 | ${project.title}`}
-                        className="absolute inset-0 w-full h-full object-cover"
+                        className="absolute top-0 left-0 right-0 bottom-0 w-full h-full object-cover"
                       />
                     </div>
                     <div className="grid grid-cols-3 gap-4 text-center">

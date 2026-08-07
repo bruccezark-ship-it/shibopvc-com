@@ -55,7 +55,7 @@ export default function AboutPage() {
               <img
                 src={companyIntro.image}
                 alt={companyIntro.imageAlt}
-                className="absolute inset-0 w-full h-full object-cover"
+                className="absolute top-0 left-0 right-0 bottom-0 w-full h-full object-cover"
               />
             </div>
           </div>

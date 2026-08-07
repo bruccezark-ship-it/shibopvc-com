@@ -23,9 +23,10 @@ export default function Header() {
     <header
       className={`site-header fixed top-0 left-0 right-0 z-[60] transition-all duration-300 ${
         scrolled
-          ? "bg-white/95 backdrop-blur-lg shadow-sm border-b border-stone-100"
+          ? "backdrop-blur-lg shadow-sm border-b border-stone-100"
           : "bg-transparent border-b border-transparent"
       }`}
+      style={scrolled ? { backgroundColor: "rgba(255,255,255,0.95)" } : undefined}
     >
       <div className="container-site flex items-center justify-between py-5">
         <Link href="/" className="flex items-center gap-3">
