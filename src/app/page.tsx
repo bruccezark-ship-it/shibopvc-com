@@ -181,13 +181,14 @@ export default function HomePage() {
               <Link
                 key={item.title}
                 href={item.link}
-                className="group block relative overflow-hidden aspect-[3/4]"
+                className="group block relative overflow-hidden"
+                style={{ paddingBottom: "133.33%" }}
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={item.img}
                   alt={`河北石博 | ${item.title}弹性地板`}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-stone-900/80 via-stone-900/20 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-6">
@@ -198,7 +199,7 @@ export default function HomePage() {
                     {item.sub}
                   </p>
                 </div>
-                <div className="absolute inset-0 flex items-center justify-center opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 bg-stone-900/40">
+                <div className="absolute inset-0 flex items-center justify-center opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 md:bg-stone-900/40">
                   <span className="inline-flex items-center gap-2 text-white border border-white/60 px-5 py-2 text-sm font-light tracking-wide">
                     {scenes.hoverCta}
                     <svg

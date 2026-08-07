@@ -49,16 +49,17 @@ export default function SolutionsContent() {
             <div>
               <Link
                 href="/projects"
-                className="block relative overflow-hidden aspect-[4/3] mb-8 group"
+                className="block relative overflow-hidden mb-8 group"
+                style={{ paddingBottom: "75%" }}
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={active.img}
                   alt={`河北石博 | ${active.scene}弹性地板方案`}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-stone-900/0 group-hover:bg-stone-900/40 transition-all duration-300 flex items-center justify-center">
-                  <span className="text-white text-sm font-light tracking-wide opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 flex items-center gap-2">
+                <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                  <span className="inline-flex items-center gap-2 text-white text-sm font-light tracking-wide border border-white/60 px-4 py-2 md:opacity-0 md:group-hover:opacity-100 md:bg-stone-900/40 md:border-white/0 transition-all duration-300">
                     <span>{solutionsPage.detailLabels.viewCaseHover}</span>
                     <svg
                       width="16"

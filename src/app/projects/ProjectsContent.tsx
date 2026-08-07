@@ -38,12 +38,12 @@ export default function ProjectsContent() {
                   className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start"
                 >
                   <div className={index % 2 === 1 ? "lg:order-2" : ""}>
-                    <div className="relative overflow-hidden aspect-[4/3] mb-6">
+                    <div className="relative overflow-hidden mb-6" style={{ paddingBottom: "75%" }}>
                       {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img
                         src={project.img}
                         alt={`河北石博 | ${project.title}`}
-                        className="w-full h-full object-cover"
+                        className="absolute inset-0 w-full h-full object-cover"
                       />
                     </div>
                     <div className="grid grid-cols-3 gap-4 text-center">

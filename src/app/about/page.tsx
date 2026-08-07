@@ -50,12 +50,12 @@ export default function AboutPage() {
                 ))}
               </div>
             </div>
-            <div className="relative overflow-hidden aspect-[4/3]">
+            <div className="relative overflow-hidden" style={{ paddingBottom: "75%" }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={companyIntro.image}
                 alt={companyIntro.imageAlt}
-                className="w-full h-full object-cover"
+                className="absolute inset-0 w-full h-full object-cover"
               />
             </div>
           </div>
