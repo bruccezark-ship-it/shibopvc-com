@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import PageHero from "@/components/PageHero";
+import TermText from "@/components/TermText";
 import { images } from "@/data/images";
 import { projects, projectsPage } from "@/data/projects";
 
@@ -115,7 +116,7 @@ export default function ProjectsContent() {
                             项目挑战
                           </h4>
                           <p className="text-sm text-stone-500 font-light leading-relaxed">
-                            {project.challenge}
+                            <TermText text={project.challenge} />
                           </p>
                         </div>
                         <div>
@@ -123,7 +124,7 @@ export default function ProjectsContent() {
                             解决方案
                           </h4>
                           <p className="text-sm text-stone-500 font-light leading-relaxed">
-                            {project.solution}
+                            <TermText text={project.solution} />
                           </p>
                         </div>
                         <div>
@@ -131,7 +132,7 @@ export default function ProjectsContent() {
                             铺装过程
                           </h4>
                           <p className="text-sm text-stone-500 font-light leading-relaxed">
-                            {project.process}
+                            <TermText text={project.process} />
                           </p>
                         </div>
                         <div>
@@ -139,7 +140,7 @@ export default function ProjectsContent() {
                             最终效果
                           </h4>
                           <p className="text-sm text-stone-500 font-light leading-relaxed">
-                            {project.result}
+                            <TermText text={project.result} />
                           </p>
                         </div>
                         <div className="bg-stone-50 p-6">

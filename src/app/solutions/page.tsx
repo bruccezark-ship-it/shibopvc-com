@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: solutionsPage.seo.title,
   description: solutionsPage.seo.description,
   keywords: solutionsPage.seo.keywords,
+  alternates: {
+    canonical: "/solutions",
+  },
 };
 
 export default function SolutionsPage() {

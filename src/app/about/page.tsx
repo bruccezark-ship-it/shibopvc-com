@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
+import TermText from "@/components/TermText";
 import { aboutPage } from "@/data/about";
 import { images } from "@/data/images";
 
@@ -7,6 +8,9 @@ export const metadata: Metadata = {
   title: aboutPage.seo.title,
   description: aboutPage.seo.description,
   keywords: aboutPage.seo.keywords,
+  alternates: {
+    canonical: "/about",
+  },
 };
 
 function CheckIcon() {
@@ -46,7 +50,9 @@ export default function AboutPage() {
               <div className="section-line" />
               <div className="space-y-4 text-sm text-stone-500 font-light leading-relaxed">
                 {companyIntro.paragraphs.map((p) => (
-                  <p key={p.slice(0, 20)}>{p}</p>
+                  <p key={p.slice(0, 20)}>
+                    <TermText text={p} />
+                  </p>
                 ))}
               </div>
             </div>
@@ -71,7 +77,9 @@ export default function AboutPage() {
             <p className="section-label">{integrationAdvantages.label}</p>
             <h2 className="section-title">{integrationAdvantages.title}</h2>
             <div className="section-line" />
-            <p className="section-desc">{integrationAdvantages.desc}</p>
+            <p className="section-desc">
+              <TermText text={integrationAdvantages.desc} />
+            </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-stone-200">
             {integrationAdvantages.items.map((item) => (
@@ -86,7 +94,7 @@ export default function AboutPage() {
                   {item.title}
                 </h3>
                 <p className="text-sm text-stone-500 font-light leading-relaxed">
-                  {item.desc}
+                  <TermText text={item.desc} />
                 </p>
               </div>
             ))}

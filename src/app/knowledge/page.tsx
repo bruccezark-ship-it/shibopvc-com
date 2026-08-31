@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: knowledgePage.seo.title,
   description: knowledgePage.seo.description,
   keywords: knowledgePage.seo.keywords,
+  alternates: {
+    canonical: "/knowledge",
+  },
 };
 
 export default function KnowledgePage() {

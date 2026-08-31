@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: productPage.seo.title,
   description: productPage.seo.description,
   keywords: productPage.seo.keywords,
+  alternates: {
+    canonical: "/products",
+  },
 };
 
 export default function ProductsPage() {

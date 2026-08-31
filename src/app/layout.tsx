@@ -3,7 +3,36 @@ import { Inter, Noto_Serif_SC } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
+import { site } from "@/data/site";
 import "./globals.css";
+
+const SITE_URL = "http://www.shibopvc.com";
+
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: site.company.fullName,
+  alternateName: site.company.brand,
+  url: SITE_URL,
+  logo: `${SITE_URL}/favicon.png`,
+  foundingDate: "2023",
+  description: site.company.taglineFooter,
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: site.company.hotline,
+    email: site.company.email,
+    contactType: "customer service",
+    areaServed: "CN",
+    availableLanguage: ["zh-CN"],
+  },
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "长安区百川大厦西塔1307室",
+    addressLocality: "石家庄",
+    addressRegion: "河北省",
+    addressCountry: "CN",
+  },
+};
 
 const inter = Inter({
   subsets: ["latin"],
@@ -20,11 +49,21 @@ const notoSerifSC = Noto_Serif_SC({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: "河北石博新材料科技有限公司",
   description:
     "河北石博是专业弹性地板系统服务商，提供PVC地板、LVT地板、SPC地板、橡胶地板、亚麻地板、运动地板全系产品，覆盖医疗、教育、商业、工业、运动等全场景地面系统解决方案。",
   keywords:
     "河北石博,河北石博新材料科技有限公司,弹性地板,PVC地板,LVT地板,SPC地板,橡胶地板,亚麻地板,运动地板,地面系统,地板铺装",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    locale: "zh_CN",
+    url: SITE_URL,
+    siteName: site.company.fullName,
+  },
   icons: {
     icon: "/favicon.png",
   },
@@ -51,6 +90,12 @@ export default function RootLayout({
         <link
           rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap"
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationJsonLd),
+          }}
         />
       </head>
       <body className="min-h-full flex flex-col font-sans font-light text-stone-900 bg-white antialiased">

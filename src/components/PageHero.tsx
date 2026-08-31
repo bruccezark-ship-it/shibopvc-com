@@ -34,14 +34,16 @@ export function PageHero({
           >
             {label}
           </p>
-          <h1 className="font-display text-4xl md:text-5xl font-medium text-white leading-tight">
-            {title}
+          <h1
+            className={`font-display text-4xl md:text-5xl font-medium leading-tight${
+              titleAccent ? " mb-4" : ""
+            }`}
+          >
+            <span className="block text-white">{title}</span>
+            {titleAccent ? (
+              <span className="block text-amber-400">{titleAccent}</span>
+            ) : null}
           </h1>
-          {titleAccent ? (
-            <h1 className="font-display text-4xl md:text-5xl font-medium text-amber-400 leading-tight mb-4">
-              {titleAccent}
-            </h1>
-          ) : null}
           {subtitle ? (
             <p className="text-white/70 font-light text-base leading-relaxed max-w-md mt-[5px]">
               {subtitle}

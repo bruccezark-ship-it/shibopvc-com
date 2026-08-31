@@ -29,7 +29,7 @@ export const homePage = {
       "scrollHint": "滚动探索",
       "bgImageKey": "hero",
       "bgImage": "/images/baoding_hospital-DbKCK1jB.webp",
-      "alt": "河北石博 | PVC弹性地面系统解决方案",
+      "alt": "河北石博新材料科技有限公司 | PVC弹性地面系统解决方案",
       "minHeight": "680px",
       "height": "h-screen"
     },

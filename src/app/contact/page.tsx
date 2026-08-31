@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: contactPage.seo.title,
   description: contactPage.seo.description,
   keywords: contactPage.seo.keywords,
+  alternates: {
+    canonical: "/contact",
+  },
 };
 
 export default function ContactPage() {

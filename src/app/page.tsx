@@ -1,11 +1,15 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { homePage } from "@/data/home";
+import TermText from "@/components/TermText";
 
 export const metadata: Metadata = {
   title: homePage.seo.title,
   description: homePage.seo.description,
   keywords: homePage.seo.keywords,
+  alternates: {
+    canonical: "/",
+  },
 };
 
 const pillarIcons: Record<string, React.ReactNode> = {
@@ -75,11 +79,9 @@ export default function HomePage() {
             >
               {hero.label}
             </p>
-            <h1 className="font-display text-5xl md:text-7xl font-medium text-white leading-[1.1]">
-              {hero.titleLine1}
-            </h1>
-            <h1 className="font-display text-5xl md:text-7xl font-medium leading-[1.1] mb-2 text-[#ffc406]">
-              {hero.titleLine2}
+            <h1 className="font-display text-5xl md:text-7xl font-medium leading-[1.1] mb-2">
+              <span className="block text-white">{hero.titleLine1}</span>
+              <span className="block text-[#ffc406]">{hero.titleLine2}</span>
             </h1>
             <p className="text-white/70 font-light text-base md:text-lg leading-relaxed mb-3 max-w-lg">
               {hero.subtitle}
@@ -121,7 +123,9 @@ export default function HomePage() {
             <p className="section-label">{system.label}</p>
             <h2 className="section-title">{system.title}</h2>
             <div className="section-line mx-auto" />
-            <p className="section-desc max-w-lg mx-auto">{system.desc}</p>
+            <p className="section-desc max-w-lg mx-auto">
+              <TermText text={system.desc} />
+            </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {system.pillars.map((item) => (
@@ -139,7 +143,7 @@ export default function HomePage() {
                   {item.subtitle}
                 </p>
                 <p className="text-sm text-stone-500 font-light leading-relaxed">
-                  {item.desc}
+                  <TermText text={item.desc} />
                 </p>
               </div>
             ))}
@@ -174,7 +178,9 @@ export default function HomePage() {
             <p className="section-label">{scenes.label}</p>
             <h2 className="section-title">{scenes.title}</h2>
             <div className="section-line" />
-            <p className="section-desc">{scenes.desc}</p>
+            <p className="section-desc">
+              <TermText text={scenes.desc} />
+            </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
             {scenes.scenes.map((item) => (
@@ -227,7 +233,9 @@ export default function HomePage() {
               <p className="section-label">{architecture.label}</p>
               <h2 className="section-title">{architecture.title}</h2>
               <div className="section-line" />
-              <p className="section-desc mb-8">{architecture.desc}</p>
+              <p className="section-desc mb-8">
+                <TermText text={architecture.desc} />
+              </p>
               <div className="space-y-4">
                 {architecture.leftLayers.map((item, index) => (
                   <div key={item.layer} className="flex items-start gap-4">
@@ -239,7 +247,7 @@ export default function HomePage() {
                         {item.layer}
                       </h4>
                       <p className="text-xs text-stone-500 font-light">
-                        {item.desc}
+                        <TermText text={item.desc} />
                       </p>
                     </div>
                   </div>
@@ -290,7 +298,9 @@ export default function HomePage() {
             <p className="section-label">{cta.label}</p>
             <h2 className="section-title">{cta.title}</h2>
             <div className="section-line" />
-            <p className="section-desc">{cta.desc}</p>
+            <p className="section-desc">
+              <TermText text={cta.desc} />
+            </p>
           </div>
           <div className="flex flex-col sm:flex-row gap-4 shrink-0">
             <Link href={cta.cta.href} className={cta.cta.className}>

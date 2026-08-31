@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import PageHero from "@/components/PageHero";
+import TermText from "@/components/TermText";
 import { images } from "@/data/images";
 import { knowledgeArticles, knowledgePage } from "@/data/knowledge";
 
@@ -40,7 +41,9 @@ export default function KnowledgeContent() {
             <p className="section-label">{knowledgePage.library.label}</p>
             <h2 className="section-title">{knowledgePage.library.title}</h2>
             <div className="section-line" />
-            <p className="section-desc">{knowledgePage.library.desc}</p>
+            <p className="section-desc">
+              <TermText text={knowledgePage.library.desc} />
+            </p>
           </div>
 
           <div className="flex flex-wrap gap-3 mb-12">
@@ -92,7 +95,7 @@ export default function KnowledgeContent() {
                           {article.title}
                         </h3>
                         <p className="text-sm text-stone-500 font-light mt-2 leading-relaxed max-w-2xl text-pretty">
-                          {article.summary}
+                          <TermText text={article.summary} />
                         </p>
                       </div>
                       <span

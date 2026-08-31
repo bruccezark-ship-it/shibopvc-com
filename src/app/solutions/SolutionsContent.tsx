@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { Fragment, useState } from "react";
 import PageHero from "@/components/PageHero";
+import TermText from "@/components/TermText";
 import { images } from "@/data/images";
 import { solutions, solutionsPage } from "@/data/solutions";
 
@@ -100,7 +101,7 @@ export default function SolutionsContent() {
                   {solutionsPage.detailLabels.recommend}
                 </h4>
                 <p className="text-sm text-stone-600 font-light leading-relaxed">
-                  {active.recommend}
+                  <TermText text={active.recommend} />
                 </p>
               </div>
               <div className="mb-8">
@@ -166,7 +167,7 @@ export default function SolutionsContent() {
                   {solutionsPage.detailLabels.process}
                 </h4>
                 <p className="text-sm text-stone-500 font-light leading-relaxed">
-                  {active.process}
+                  <TermText text={active.process} />
                 </p>
               </div>
 

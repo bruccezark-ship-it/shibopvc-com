@@ -99,7 +99,7 @@ function ProductDialog({
           <div className="md:col-span-3 overflow-y-auto max-h-[60dvh] md:max-h-[600px]">
             <div className="p-6 md:p-8 pb-28 md:pb-8">
               <p className="text-sm text-stone-500 font-light leading-relaxed mb-6 text-pretty">
-                {product.desc}
+                <TermText text={product.desc} />
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
                 <div>
@@ -178,6 +178,8 @@ function ProductDialog({
     </div>
   );
 }
+
+import TermText from "@/components/TermText";
 
 export default function ProductsContent() {
   const [filter, setFilter] = useState<(typeof productFilters)[number]>("全部");
@@ -281,7 +283,7 @@ export default function ProductsContent() {
                     {item.tagline}
                   </p>
                   <p className="text-xs text-stone-500 font-light leading-relaxed flex-1 text-pretty mb-4">
-                    {item.highlight}
+                    <TermText text={item.highlight} />
                   </p>
                   <div className="flex flex-wrap gap-1.5 mb-4">
                     {item.scenes.map((scene) => (
