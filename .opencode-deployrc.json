@@ -3,6 +3,9 @@
   "cleanRemote": true,
   "crawlMaxPages": 50,
   "crawlMaxDepth": 1,
+  "publish": {
+    "trailingSlash": false
+  },
   "backup": {
     "prefix": "shibopvc-com/",
     "dirs": [

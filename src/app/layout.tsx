@@ -71,6 +71,9 @@ export const metadata: Metadata = {
     google: "Rn8YgXQH2W6ntr2AoYuRYw9GJcey0VMS86DlbBAS2q4",
     other: {
       "baidu-site-verification": "codeva-6t4tCYCGkt",
+      "msvalidate.01": "05648DB59A54B7653AFC23AB36682970",
+      "bytedance-verification-code": "Rg9MTZtVHvG9PhznVbOB",
+      "sogou_site_verification": "1HY6Q5GbzH",
     },
   },
 };
