@@ -117,6 +117,46 @@ export default function HomePage() {
         <div className="absolute bottom-0 right-0 w-px h-48 bg-gradient-to-t from-transparent via-amber-400/30 to-transparent" />
       </section>
 
+      <section className="py-28 bg-white">
+        <div className="container-site">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+            <div>
+              <p className="section-label">关于我们</p>
+              <h2 className="section-title">河北石博新材料科技有限公司</h2>
+              <div className="section-line" />
+              <div className="space-y-4 text-sm text-stone-500 font-light leading-relaxed">
+                <p>
+                  <TermText text="河北石博新材料科技有限公司成立于2023年，是集弹性地板材料供应与铺装交付于一体的一站式系统服务商。公司深耕弹性地板行业，业务覆盖商用、运动、医疗、教育、工业等多个领域。" />
+                </p>
+                <p>
+                  <TermText text="河北石博与国内外知名弹性地板品牌建立直接合作关系，省去中间环节，确保正品品质与价格优势。同时，公司拥有经验丰富的专业铺装团队，持证上岗，标准化铺装流程，累计服务客户150+家，铺装面积超过100万平方米。" />
+                </p>
+                <p>
+                  <TermText text="从材料选型、报价、供货到铺装交付、售后维护，石博为客户提供全流程一体化服务，综合成本节省20%-30%，品质全程可控。" />
+                </p>
+              </div>
+            </div>
+            <div className="grid grid-cols-2 gap-6">
+              {[
+                { num: "150+", label: "累计服务客户" },
+                { num: "100万㎡+", label: "累计铺装面积" },
+                { num: "10+省", label: "业务覆盖范围" },
+                { num: "20%-30%", label: "综合成本节省" },
+              ].map((stat) => (
+                <div key={stat.label} className="bg-stone-50 p-6 text-center">
+                  <p className="font-display text-2xl font-medium text-stone-900 mb-1">
+                    {stat.num}
+                  </p>
+                  <p className="text-xs text-stone-400 font-light tracking-wide">
+                    {stat.label}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className={`py-28 ${system.bg}`}>
         <div className="container-site">
           <div className="mb-16 text-center">
@@ -292,20 +332,114 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="py-28 bg-stone-50">
-        <div className="container-site flex flex-col md:flex-row md:items-center md:justify-between gap-8">
-          <div>
-            <p className="section-label">{cta.label}</p>
-            <h2 className="section-title">{cta.title}</h2>
-            <div className="section-line" />
-            <p className="section-desc">
-              <TermText text={cta.desc} />
+      <section className="py-28 bg-white">
+        <div className="container-site">
+          <div className="mb-16 text-center">
+            <p className="section-label">常见问题</p>
+            <h2 className="section-title">关于PVC弹性地板，您想了解的都在这里</h2>
+            <div className="section-line mx-auto" />
+            <p className="section-desc max-w-2xl mx-auto">
+              河北石博作为专业弹性地板系统服务商，为您解答关于PVC地板、LVT地板、SPC地板等弹性地面材料的常见疑问
             </p>
           </div>
-          <div className="flex flex-col sm:flex-row gap-4 shrink-0">
-            <Link href={cta.cta.href} className={cta.cta.className}>
-              {cta.cta.label}
-            </Link>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {[
+              {
+                q: "PVC地板和瓷砖相比有什么优势？",
+                a: "PVC地板比瓷砖更轻薄、脚感更舒适，具有更好的吸音和减震性能。同时PVC地板防滑性能优异，铺装更快捷，综合成本更低，广泛应用于医院、学校、商业空间等场所。",
+              },
+              {
+                q: "弹性地板适合用在医院吗？",
+                a: "非常适合。弹性地板是医院地面的首选材料，PVC地板具有抗菌、防滑、易清洁消毒等特性，同质透心PVC地板更是医疗场所的标准选择，能满足医院对卫生和耐磨的严格要求。",
+              },
+              {
+                q: "LVT地板和SPC地板有什么区别？",
+                a: "LVT地板（豪华乙烯基地板）质地较软，脚感舒适，适合家庭和轻度商业使用；SPC地板（石塑复合地板）质地更坚硬，防水性和稳定性更强，适合高流量商业和公共场所。两者都属于弹性地板家族。",
+              },
+              {
+                q: "橡胶地板可以用在运动场馆吗？",
+                a: "可以。橡胶地板具有优异的弹性和减震性能，是运动场馆的理想选择。运动地板需要满足专业运动标准，河北石博提供符合各类运动场地要求的橡胶地板和运动PVC地胶产品。",
+              },
+              {
+                q: "亚麻地板环保吗？",
+                a: "亚麻地板是非常环保的弹性地板材料，主要由亚麻籽油、软木粉、石灰石等天然原料制成，可自然降解。亚麻地板具有天然抗菌性，适合教育、医疗等对环保要求高的场所。",
+              },
+              {
+                q: "铺装弹性地板前需要做自流平吗？",
+                a: "通常需要。自流平是弹性地板铺装前的重要基层处理工序，能确保地面平整度达到铺装要求。河北石博的专业铺装团队会先进行基层检测，根据实际情况决定是否需要自流平处理。",
+              },
+              {
+                q: "河北石博的弹性地板价格是多少？",
+                a: "弹性地板价格因材料类型、厚度、品牌而异。河北石博与国内外知名弹性地板品牌建立直接合作关系，省去中间环节，确保正品品质与价格优势。欢迎联系我们获取免费报价方案。",
+              },
+              {
+                q: "PVC地板的使用寿命有多长？",
+                a: "PVC地板的使用寿命取决于使用场景和维护保养。一般来说，商用PVC地板使用寿命可达10-15年，同质透心PVC地板因通体同质结构，磨损后颜色一致不露底，使用寿命更长。定期维护保养可有效延长使用寿命。",
+              },
+            ].map((item) => (
+              <div key={item.q} className="bg-stone-50 p-6">
+                <h3 className="text-sm font-medium text-stone-900 mb-3 flex items-start gap-2">
+                  <span className="text-amber-500 shrink-0 mt-0.5">Q</span>
+                  {item.q}
+                </h3>
+                <p className="text-sm text-stone-500 font-light leading-relaxed pl-5">
+                  <TermText text={item.a} />
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-28 bg-stone-50">
+        <div className="container-site">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8 mb-16">
+            <div>
+              <p className="section-label">{cta.label}</p>
+              <h2 className="section-title">{cta.title}</h2>
+              <div className="section-line" />
+              <p className="section-desc">
+                <TermText text={cta.desc} />
+              </p>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-4 shrink-0">
+              <Link href={cta.cta.href} className={cta.cta.className}>
+                {cta.cta.label}
+              </Link>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              {
+                title: "免费上门勘察",
+                desc: "专业工程师免费上门测量，根据现场条件提供个性化弹性地板铺装方案",
+              },
+              {
+                title: "48小时出方案",
+                desc: "从需求沟通到材料选型、铺装报价，48小时内为您提供完整解决方案",
+              },
+              {
+                title: "双重质保",
+                desc: "材料质保与铺装质保双重保障，PVC地板、橡胶地板全系产品售后无忧",
+              },
+              {
+                title: "200+项目经验",
+                desc: "覆盖医院、学校、商业、工业、运动场馆等场景，累计服务客户超200家",
+              },
+            ].map((item) => (
+              <div
+                key={item.title}
+                className="bg-white p-6 border border-stone-100"
+              >
+                <h3 className="text-sm font-medium text-stone-900 mb-2">
+                  {item.title}
+                </h3>
+                <p className="text-xs text-stone-500 font-light leading-relaxed">
+                  <TermText text={item.desc} />
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
