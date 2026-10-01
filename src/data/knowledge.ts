@@ -9,9 +9,9 @@ export type KnowledgeArticle = {
 
 export const knowledgePage = {
   "seo": {
-    "title": "技术支持 - 弹性地板知识库|材料选型|铺装工艺|维护保养",
+    "title": "河北石博 - 弹性地板知识库|材料选型|铺装工艺|维护保养",
     "description": "河北石博弹性地板系统知识库，涵盖PVC地板、LVT地板、SPC地板、橡胶地板、亚麻地板五大品类的材料选型指南、铺装工艺详解、维护保养攻略和场景应用指南。",
-    "keywords": "弹性地板知识,PVC地板选型,地板铺装工艺,地板维护保养,LVT地板,SPC地板,河北石博,河北石博新材料科技有限公司"
+    "keywords": "河北石博,河北石博新材料科技有限公司,弹性地板知识,PVC地板选型,地板铺装工艺,地板维护保养,LVT地板,SPC地板"
   },
   "hero": {
     "label": "知识库",
